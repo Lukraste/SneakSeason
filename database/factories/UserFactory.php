@@ -2,14 +2,22 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
  */
 class UserFactory extends Factory
 {
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = User::class;
+
     /**
      * Define the model's default state.
      *
@@ -18,11 +26,18 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
+            'email' => $this->faker->unique()->safeEmail,
+            'password' => bcrypt('Soleil123'),
+            'role' => 'user',
+            'max_orders' => 5,
+            'lastname' => $this->faker->lastName,
+            'firstname' => $this->faker->firstName,
+            'birthdate' => $this->faker->date($format = 'd-m-Y', $max = '01-01-2006'),
+            'phone_number' => $this->faker->unique()->phoneNumber,
+            'gender' => $this->faker->randomElement($array = array ('Femme','Homme')),
+            'rgpd' => true,
+            'newsletters' => $this->faker->boolean($chanceOfGettingTrue = 50),
+            'remember_token' => Str::random(50)
         ];
     }
 
