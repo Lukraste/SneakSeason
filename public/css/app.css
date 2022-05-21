@@ -10,12 +10,19 @@ header #main {
   height: 20vh;
   padding: 5vh 3vw 2vh 3vw;
 }
+header #main #logo {
+  margin-top: 1vh;
+}
+header #main #logo a img {
+  margin: auto;
+  width: 15vh;
+}
 header #main #socials {
   display: flex;
   flex-flow: row nowrap;
 }
 header #main #socials a {
-  padding-left: 10px;
+  padding-right: 10px;
 }
 header #main #socials a img {
   width: 3vh;
@@ -24,13 +31,6 @@ header #main #socials a img {
 }
 header #main #socials a img:hover {
   transform: scale(1.1);
-}
-header #main #logo {
-  margin-top: 1vh;
-}
-header #main #logo a img {
-  margin: auto;
-  width: 15vh;
 }
 header #main #features {
   display: flex;
@@ -69,7 +69,7 @@ header #hover-underline-animation:hover:after {
 }
 header #call-to-action a {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 43%;
   width: 15vw;
   text-align: center;
@@ -83,78 +83,34 @@ header #call-to-action a:hover {
 }
 
 footer {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
   background-color: #171730;
   color: #dbe1e3;
 }
-footer #main-footer {
+footer h1 {
+  font-size: 3vh;
+}
+footer h2 {
+  font-size: 2vh;
+}
+footer a, footer p, footer label {
+  font-size: 1.5vh;
+}
+footer #socials {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 220px;
-  width: 100%;
-  padding: 20px 150px;
+  margin-top: 15px;
+  margin-bottom: 40px;
 }
-footer #main-footer #contacts {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
+footer #socials a {
+  padding-right: 10px;
 }
-footer #main-footer #contacts h1 {
-  margin: 0 0 10px 5px;
-  font-size: 20px;
-}
-footer #main-footer #contacts p {
-  margin: 5px;
-}
-footer #main-footer #contacts .socials {
-  display: flex;
-  justify-content: center;
-  height: 30px;
-  margin-top: 10px;
-}
-footer #main-footer #contacts .socials .white {
+footer #socials a img {
+  width: 3vh;
+  height: auto;
   filter: brightness(0) invert(1);
 }
-footer #main-footer #contacts .socials a :hover {
+footer #socials a img:hover {
   transform: scale(1.1);
-}
-footer #main-footer #contacts .socials a img {
-  height: 3vh;
-  margin-right: 10px;
-}
-footer #main-footer #newsletter {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-footer #main-footer #docs {
-  display: flex;
-  flex-flow: column nowrap;
-  padding-right: 70px;
-}
-footer #main-footer #docs h2 {
-  margin-bottom: 8px;
-  font-size: 20px;
-}
-footer #main-footer #docs a {
-  text-decoration: none;
-  color: #dbe1e3;
-  margin: 5px;
-}
-footer #bottom-footer {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  border-top: 1px solid white;
-}
-footer #bottom-footer p {
-  margin-left: 10px;
 }
 
 .products {

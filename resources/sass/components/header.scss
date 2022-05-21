@@ -9,30 +9,30 @@ header {
       align-items: flex-start;
       height: 20vh;
       padding: 5vh 3vw 2vh 3vw;
-
-      #socials {
-         display: flex;
-         flex-flow: row nowrap;
-         
-         a {
-            padding-left: 10px;
-            img {
-               width: 3vh;
-               height: auto;
-               filter: brightness(0) invert(1);
-
-               &:hover {
-                  transform: scale(1.1);               }
-            }
-         }
-      }
-
+      
       #logo {
          margin-top: 1vh;
          a {
             img {
                margin: auto;
                width: 15vh;
+            }
+         }
+      }
+      
+      #socials {
+         display: flex;
+         flex-flow: row nowrap;
+         
+         a {
+            padding-right: 10px;
+            img {
+               width: 3vh;
+               height: auto;
+               filter: brightness(0) invert(1);
+      
+               &:hover {
+                  transform: scale(1.1);               }
             }
          }
       }
@@ -81,7 +81,7 @@ header {
     #call-to-action {
        a {
          position: absolute;
-         top: 50%;
+         top: 60%;
          left: 43%;
          width: 15vw;
          text-align: center;
