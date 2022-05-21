@@ -1,1 +1,289 @@
+header {
+  background-color: #171730;
+  color: #dbe1e3;
+}
+header #main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 20vh;
+  padding: 5vh 3vw 2vh 3vw;
+}
+header #main #socials {
+  display: flex;
+  flex-flow: row nowrap;
+}
+header #main #socials a {
+  padding-left: 10px;
+}
+header #main #socials a img {
+  width: 3vh;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+header #main #socials a img:hover {
+  transform: scale(1.1);
+}
+header #main #logo {
+  margin-top: 1vh;
+}
+header #main #logo a img {
+  margin: auto;
+  width: 15vh;
+}
+header #main #features {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+header #main #features a {
+  padding-right: 10px;
+}
+header #main #features a img {
+  width: 3vh;
+  filter: brightness(0) invert(1);
+}
+header #main #features a img:hover {
+  transform: scale(1.1);
+}
+header #hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+header #hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #dbe1e3;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+header #hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+header #call-to-action a {
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  width: 15vw;
+  text-align: center;
+  background-color: #171730;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1.5vw;
+}
+header #call-to-action a:hover {
+  transform: scale(1.05);
+}
 
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: #171730;
+  color: #dbe1e3;
+}
+footer #main-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 220px;
+  width: 100%;
+  padding: 20px 150px;
+}
+footer #main-footer #contacts {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+footer #main-footer #contacts h1 {
+  margin: 0 0 10px 5px;
+  font-size: 20px;
+}
+footer #main-footer #contacts p {
+  margin: 5px;
+}
+footer #main-footer #contacts .socials {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  margin-top: 10px;
+}
+footer #main-footer #contacts .socials .white {
+  filter: brightness(0) invert(1);
+}
+footer #main-footer #contacts .socials a :hover {
+  transform: scale(1.1);
+}
+footer #main-footer #contacts .socials a img {
+  height: 3vh;
+  margin-right: 10px;
+}
+footer #main-footer #newsletter {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+footer #main-footer #docs {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-right: 70px;
+}
+footer #main-footer #docs h2 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+footer #main-footer #docs a {
+  text-decoration: none;
+  color: #dbe1e3;
+  margin: 5px;
+}
+footer #bottom-footer {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid white;
+}
+footer #bottom-footer p {
+  margin-left: 10px;
+}
+
+.products {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 30px 90px;
+}
+.products .top-infos {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.products .products-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.products .products-list .product-one {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  max-width: 400px;
+  height: 250px;
+  box-shadow: 0px 0px 15px 1px #BEBEBE;
+  margin-bottom: 35px;
+  margin-left: 10px;
+}
+.products .products-list .product-one button {
+  display: none;
+  margin-top: 100px;
+}
+.products .products-list .product-one img {
+  max-width: 400px;
+}
+.products .products-list .product-one img:hover button:hover {
+  display: inline-block;
+}
+.products .products-list .product-one a, .products .products-list .product-one p {
+  font-size: 15pt;
+  position: relative;
+  bottom: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.products .products-list .product-one a {
+  position: relative;
+  bottom: 80px;
+}
+.products .products-list .product-one .brand-name {
+  font-weight: normal;
+}
+.products .products-list .product-one p {
+  font-size: 13pt;
+  margin: 8px 0;
+}
+.products .products-list .product-one #call-to-action {
+  background-color: #171730;
+  color: #dbe1e3;
+  text-align: center;
+  font-size: 18pt;
+  width: 310px;
+  padding: 10px 0;
+  margin-top: 17px;
+}
+.products .products-list .product-one #call-to-action:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.products #show-more {
+  font-size: 20pt;
+  font-weight: 800;
+}
+.products #show-more:hover {
+  text-decoration: underline;
+}
+
+.brand {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: white;
+}
+.brand #brand-image {
+  height: 511.6px;
+}
+.brand #brand-image:hover {
+  opacity: 0.9;
+}
+.brand #brand-image img {
+  width: 50vw;
+}
+.brand #informations {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 0 50px;
+  width: 50vw;
+  text-align: center;
+}
+.brand #informations p {
+  text-align: center;
+  font-size: 14pt;
+}
+.brand #informations a {
+  width: 350px;
+  background-color: #171730;
+  padding: 15px;
+  font-size: 15pt;
+  font-weight: 800;
+  color: #dbe1e3;
+  text-align: center;
+  border-radius: 20px;
+}
+.brand #informations a:hover {
+  transform: scale(1.05);
+}
+
+html body {
+  background-color: #dbe1e3;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+html body main {
+  min-height: 50vh;
+}
+html body a {
+  text-decoration: none;
+  cursor: pointer;
+}

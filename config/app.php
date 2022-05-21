@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -185,6 +185,8 @@ return [
         /*
          * Package Service Providers...
          */
+
+        App\Providers\FortifyServiceProvider::class,
 
         /*
          * Application Service Providers...

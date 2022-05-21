@@ -1,0 +1,131 @@
+.products {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 30px 90px;
+
+    .top-infos {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .products-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        .product-one {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            max-width: 400px;
+            height: 250px;
+            box-shadow: 0px 0px 15px 1px #BEBEBE; 
+            margin-bottom: 35px;
+            margin-left: 10px;
+
+            button {
+                display: none;
+                margin-top: 100px;
+            }
+
+            img {
+                max-width: 400px;
+
+                &:hover button:hover {
+                    display: inline-block;
+                }
+            }
+
+            a, p {
+                font-size: 15pt;
+                position: relative;
+                bottom: 50px;
+                font-weight: 800;
+                margin-bottom: 10px;
+            }
+
+            a{
+                position: relative;
+                bottom: 80px;
+            }
+            .brand-name {
+                font-weight: normal;
+            }
+            p {
+                font-size: 13pt;
+                margin: 8px 0;
+            }
+            #call-to-action {
+                background-color: $primaryColor;
+                color: $secondaryColor;
+                text-align: center;
+                font-size: 18pt;
+                width: 310px;
+                padding: 10px 0;
+                margin-top: 17px;
+
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    #show-more {
+        font-size: 20pt;
+        font-weight: 800;
+
+        &:hover {
+            text-decoration: underline;
+        }
+     }
+}
+
+.brand {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background-color: white;
+
+    #brand-image {
+        height: 511.6px;
+        &:hover {
+            opacity: 0.9;
+        }
+        img {
+            width: 50vw;
+        }
+    }
+
+    #informations {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 0 50px;
+        width: 50vw;
+        text-align: center;
+        
+        p {
+            text-align: center;
+            font-size: 14pt;
+        }
+        a {
+            width: 350px;
+            background-color: $primaryColor;
+            padding: 15px;
+            font-size: 15pt;
+            font-weight: 800;
+            color: $secondaryColor;
+            text-align: center;
+            border-radius: 20px;
+
+            &:hover {
+                transform: scale(1.05)
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+header {
+   background-color: $primaryColor;
+   color: $secondaryColor;
+
+   #main {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 20vh;
+      padding: 5vh 3vw 2vh 3vw;
+
+      #socials {
+         display: flex;
+         flex-flow: row nowrap;
+         
+         a {
+            padding-left: 10px;
+            img {
+               width: 3vh;
+               height: auto;
+               filter: brightness(0) invert(1);
+
+               &:hover {
+                  transform: scale(1.1);               }
+            }
+         }
+      }
+
+      #logo {
+         margin-top: 1vh;
+         a {
+            img {
+               margin: auto;
+               width: 15vh;
+            }
+         }
+      }
+
+      #features {
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: space-around;
+         
+          a {
+            padding-right: 10px;
+             img {
+                width: 3vh;
+                filter: brightness(0) invert(1);
+
+                &:hover {
+                  transform: scale(1.1);
+               }
+            }
+         }
+      }
+   }
+   
+   #hover-underline-animation {
+      display: inline-block;
+      position: relative;
+
+      &:after {
+         content: '';
+         position: absolute;
+         width:100%;
+         transform: scaleX(0);
+         height: 2px;
+         bottom: 0;
+         left: 0;
+         background-color: #dbe1e3;
+         transform-origin: bottom right;
+         transition: transform 0.25s ease-out;
+       }
+       
+       &:hover:after {
+         transform: scaleX(1);
+         transform-origin: bottom left;
+       }
+    }
+    #call-to-action {
+       a {
+         position: absolute;
+         top: 50%;
+         left: 43%;
+         width: 15vw;
+         text-align: center;
+         background-color: $primaryColor;
+         padding: 10px 20px;
+         border-radius: 25px;
+         font-size: 1.5vw;
+
+         &:hover {
+            transform: scale(1.05);
+         }
+       }
+    }
+}
+

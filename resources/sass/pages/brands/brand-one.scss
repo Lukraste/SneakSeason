@@ -1,0 +1,10 @@
+.brand-one {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 50px 0;
+
+    #brand-image {
+        width: 350px;
+    }
+}

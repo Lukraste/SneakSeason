@@ -1,0 +1,84 @@
+#sneaker-one {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 50px 60px;
+    width: 90%;
+
+    #top-infos {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        margin-bottom: 30px;
+
+        img {
+            width: 50vw;
+            height: auto;
+            box-shadow: 0px 0px 15px 1px #BEBEBE;
+        }
+
+        #sneaker-infos {
+            position: relative;
+            bottom: 30px;
+            left: 80px;
+
+            h1 {
+                font-size: 25pt;
+            }
+            h2 {
+                font-size: 18pt;
+            }
+            form {
+                display: flex;
+                flex-flow: column nowrap;
+                font-size: 15pt;
+
+                select[name="size_id"] {
+                    width: 80px;
+                    height: 30px;
+                    font-size: 13pt;
+                    margin: 15px 0;
+                }
+                input[name="quantity"] {
+                    width: 50px;
+                    height: 30px;
+                    font-size: 13pt;
+                    margin: 15px 0;
+                }
+                input[type="submit"] {
+                    width: 300px;
+                    height: 40px;
+                    font-size: 16pt;
+                    margin: 15px 0;
+                    background-color: $primaryColor;
+                    color: $secondaryColor;
+                    border-radius: 20px;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    #bottom-infos {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 50%;
+        margin-bottom: 60px;
+        
+        h2 {
+            font-size: 20pt
+        }
+        p {
+            font-size: 14pt;
+            text-align: center;
+            margin:0;
+        }
+    }
+    #produits-similaires {
+        margin: 0 20px;
+    }
+}

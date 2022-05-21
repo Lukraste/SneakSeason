@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Size;
 use App\Models\Brand;
+use App\Models\Image;
 use App\Models\Category;
 use App\Enums\ProductStock;
 use App\Enums\ProductGender;
@@ -17,9 +18,8 @@ class Product extends Model
     protected $fillable = [
         'name',
         'slug',
-        'price_no_VAT',
-        'price_VAT',
-        'VAT',
+        'price_vat',
+        'be_vat',
         'gender',
         'stock',
         'description',

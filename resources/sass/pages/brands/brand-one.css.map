@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;EACxB,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,MAAM;CAKjB;;AATD,AAMI,UANM,CAMN,YAAY,CAAC;EACT,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "brand-one.scss"
+    ],
+    "names": [],
+    "file": "brand-one.css"
+}

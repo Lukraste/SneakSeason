@@ -1,2 +1,27 @@
 @import 'variables',
-        ''
+        'components/header',
+        'components/footer',
+        'pages/products/products-all';
+
+
+html {
+    body {
+        background-color: $secondaryColor;
+        font-family: 'Raleway', sans-serif;
+        margin: 0;
+
+        main {
+            min-height: 50vh;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+ 
+
+
+

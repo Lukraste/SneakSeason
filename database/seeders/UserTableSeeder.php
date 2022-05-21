@@ -20,17 +20,14 @@ class UserTableSeeder extends Seeder
             [
                 'email' => 'admin@example.com',
                 'password' => bcrypt('Ifosup'),
-                'role' => 'admin',
-                'max_orders' => null
+                'role' => 'admin'
             ],
             [
                 'email' => 'pierre.dpt@example.com',
                 'password' => bcrypt('Ifosup'),
-                'role' => 'admin',
-                'max_orders' => null
+                'role' => 'admin'
             ]
-        ]
-    );
+        ]);
 
         User::factory()
         ->times(50)

@@ -1,32 +1,32 @@
 <?php
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Pages\IndexController;
+use App\Http\Controllers\Pages\ProductController;
+use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\Administration\DashboardAdminController;
+use App\Http\Controllers\Administration\UserAdminController;
+use App\Http\Controllers\Administration\SneakerAdminController;
+use App\Http\Controllers\Administration\BrandAdminController;
+use App\Http\Controllers\Administration\SizeAdminController;
+use App\Http\Middleware\isAdmin;
 
-use Illuminate\Support\Facades\Route,
-    App\Http\Controllers\Controller,
-    App\Http\Controllers\IndexController,
-    App\Http\Controllers\Pages\PageController,
-    App\Http\Controllers\Pages\UserController,
-    App\Http\Controllers\Administration\DashboardAdminController,
-    App\Http\Controllers\Administration\UserAdminController,
-    App\Http\Controllers\Administration\SneakerAdminController,
-    App\Http\Controllers\Administration\BrandAdminController,
-    App\Http\Controllers\Administration\SizeAdminController,
-    App\Http\Middleware\isAdmin;
+//--------------------------------------------- Pages publiques
 
-//--------------------------------------------- Pages
-
-Route::resource('/', IndexController::class);
-
-Route::controller(PageController::class)->group(function () {
-
-    Route::get('selection-saison', 'all-season');
-    Route::get('nouveautes', 'all-news');
-    Route::get('tendances', 'all-trends');
-    Route::get('promotions', 'all-discounts');
-    Route::get('marques/{marque}', 'show-brand');
-    Route::get('marques', 'all-brands');
-    Route::get('politique-de-confidentialite', 'show-confidentialite');
+Route::controller(IndexController::class)->group(function () {
+    Route::get('/', 'index');
+    Route::get('/conditions-generales-d-utilisation', 'cgu');
+    Route::get('/politique-de-confidentialite', 'rgpd');
 });
 
+Route::controller(ProductController::class)->group(function () {
+    Route::get('selection-saison', 'all_season');
+    Route::get('nouveautes', 'all_news');
+    Route::get('tendances', 'all_popular');
+    Route::get('promotions', 'all_discounts');
+    Route::get('marques', 'all_brands');
+    Route::get('marques/{marque}', 'show_brand');
+});
 
 //--------------------------------------------- Interface client
 
@@ -35,7 +35,7 @@ Route::resource('user', UserController::class)->middleware('auth');
 //--------------------------------------------- Interface administration
 
 Route::prefix('admin')
-    ->middleware(isAdmin::class)
+    ->middleware(['auth', 'role:admin'])
     ->group(function() {
         Route::resource('/', DashboardAdminController::class);
         Route::resource('users', UserAdminController::class);

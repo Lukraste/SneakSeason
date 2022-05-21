@@ -1,0 +1,106 @@
+#interface-user {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    #interface-menu {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+    }
+
+    #user-edit {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        #user-edit-form {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+
+            #user-sex {
+                display: flex;
+                flex-flow: row nowrap;
+            }
+        }
+    }
+}
+
+
+#user-connexion {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    #user-connexion-form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        label {
+            margin-top: 20px;
+            font-size: 14pt;
+        }
+        input {
+            margin-top: 20px;
+            width: 250px;
+            font-size: 14pt;
+            border-radius: 20px;
+        }
+    }
+    a {
+        margin-top: 20px;
+        font-size: 14pt;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#user-register {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+
+    #user-register-form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        label {
+            margin-top: 20px;
+            font-size: 14pt;
+        }
+        input {
+            margin-top: 15px;
+            width: 250px;
+            font-size: 14pt;
+            border-radius: 20px;
+        }
+        #opt-in {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+
+            input {
+                margin-right: -70px;
+            }
+
+            label {
+                text-align: left;
+            }
+        }
+    }
+}

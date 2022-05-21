@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Sneaker;
-use App\Models\Brand;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
+    public function __construct()
+    {
+      $brands = Brand::all();
+      View::share('homepage', $brands);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +19,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('homepage');
+        $sneakers = Sneaker::all();
+        return view('pages.homepage', ['sneakers' => $sneakers]);
     }
 }
