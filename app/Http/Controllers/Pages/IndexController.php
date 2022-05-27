@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Pages;
-use App\Models\Product;
 use App\Models\Brand;
-use App\Models\CategoryProduct;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -11,27 +10,19 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $new_products_id = CategoryProduct::select('product_id')
-        ->where('category_id', 2)
-        ->orderBy('product_id')
-        ->get();
+        $new_category = Category::where('name', 'Nouveautés')->first();
+        $popular_category = Category::where('name', 'Populaires')->first();
 
-        $popular_products_id = CategoryProduct::select('product_id')
-        ->where('category_id', 3)
-        ->orderBy('product_id')
-        ->get();
-        
-        $popular_products = Product::whereIn('id', $popular_products_id)->get();
-        $new_products = Product::whereIn('id', $new_products_id)->get();
+        $brand_nike = Brand::where('name', 'Nike')->first();
+        $brand_adidas = Brand::where('name', 'Adidas')->first();
 
-        $brand_nike = Brand::find(1);
-        $brand_adidas = Brand::find(2);
-
+        $new_products = $new_category->products->sortBy('price_vat');
+        $popular_products = $popular_category->products->sortBy('price_vat');
 
         return view('homepage',
             [
-                'popular_products' => $popular_products,
                 'new_products' => $new_products,
+                'popular_products' => $popular_products,
                 'brand_nike' => $brand_nike,
                 'brand_adidas' => $brand_adidas
             ]);
@@ -39,11 +30,14 @@ class IndexController extends Controller
 
     public function rgpd()
     {
-        return view('pages.docs.rgpd');
+        return view('pages.about.rgpd');
     }
-
     public function cgu()
     {
-        return view('pages.docs.cgu');
+        return view('pages.about.cgu');
+    }
+    public function cookies()
+    {
+        return view('pages.about.cookies');
     }
 }

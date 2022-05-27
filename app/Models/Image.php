@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Color;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,11 +14,6 @@ class Image extends Model
 
     public function product(): BelongsTo
     {
-        return $this->belongsTo(Product::class);
-    }
-
-    public function color(): BelongsTo
-    {
-        return $this->belongsTo(Color::class);
+        return $this->belongsTo(Product::class, 'product_id');
     }
 }

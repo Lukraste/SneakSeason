@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\Size;
-use App\Models\Color;
 use App\Models\Product;
 use App\Models\Inventory;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -27,14 +26,12 @@ class InventoryFactory extends Factory
      */
     public function definition()
     {
-        $colorsId = Color::pluck('id');
         $sizesId = Size::pluck('id');
         $productsId = Product::pluck('id');
 
         return [
             'product_id' => $this->faker->randomElement($productsId),
             'size_id' => $this->faker->randomElement($sizesId),
-            'color_id' => $this->faker->randomElement($colorsId),
             'quantity' => rand(1, 10)
         ];
     }

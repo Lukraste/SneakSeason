@@ -1,9 +1,11 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 use App\Models\Brand;
+use App\Models\Color;
+use App\Models\Modele;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -22,10 +24,12 @@ return new class extends Migration
             $table->float('be_vat')->default(21);
             $table->string('product_code', 255)->unique();
             $table->enum('gender', ['Femme', 'Homme'])->default('Femme');
-            $table->enum('stock', ['Disponible', 'Rupture', 'Prochainement' ]);
+            $table->enum('stock', ['Disponible', 'Rupture' ]);
             $table->integer('discount')->nullable();
             $table->text('description')->nullable();
             $table->foreignIdFor(Brand::class);
+            $table->foreignIdFor(Color::class);
+            $table->foreignIdFor(Modele::class);
             $table->timestamps();
         });
     }

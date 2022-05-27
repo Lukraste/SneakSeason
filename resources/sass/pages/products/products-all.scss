@@ -2,129 +2,152 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin: 30px 90px;
+    margin: 30px 50px;
+    color: $primaryColor;
 
-    .top-infos {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: center;
+    h1 {
+        font-size: 30pt;
     }
 
     .products-list {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
-        margin-top: 30px;
+        justify-content: center;
+        margin: 50px 0 30px 0;
 
         .product-one {
             display: flex;
             flex-flow: column nowrap;
-            align-items: center;
-            max-width: 400px;
-            height: 250px;
-            box-shadow: 0px 0px 15px 1px #BEBEBE; 
-            margin-bottom: 35px;
-            margin-left: 10px;
-
-            button {
-                display: none;
-                margin-top: 100px;
-            }
+            height: 40vh;
+            box-shadow: 0px 0px 15px 1px #BEBEBE;
+            margin: 40px 10px 30px 10px;
+            padding-bottom: 10px;
 
             img {
-                max-width: 400px;
+                width: 60vw;
+            }
 
-                &:hover button:hover {
-                    display: inline-block;
+            .infos {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                margin: 15px 20px 5px 20px;
+
+                #name {
+                    font-size: 14pt;
+                }
+
+                i {
+                    opacity: 0.8;
+                    font-size: 11pt;
+                }
+
+                #price {
+                    font-weight: bolder;
+                    font-size: 14pt;
                 }
             }
 
-            a, p {
-                font-size: 15pt;
-                position: relative;
-                bottom: 50px;
-                font-weight: 800;
-                margin-bottom: 10px;
-            }
-
-            a{
-                position: relative;
-                bottom: 80px;
-            }
-            .brand-name {
-                font-weight: normal;
-            }
-            p {
-                font-size: 13pt;
-                margin: 8px 0;
-            }
-            #call-to-action {
-                background-color: $primaryColor;
-                color: $secondaryColor;
+            .call-to-action {
+                margin: auto;
+                width: 150px;
                 text-align: center;
-                font-size: 18pt;
-                width: 310px;
-                padding: 10px 0;
-                margin-top: 17px;
+                border: 2px solid currentColor;
+                border-radius: 10px;
+                color: $primaryColor;
+                font-size: 12pt;
+                font-weight: 100;
+                overflow: hidden;
+                padding: 10px 25px;
+                position: relative;
+                text-decoration: none;
+                transition: .2s transform ease-in-out;
+                will-change: transform;
+                z-index: 0;
+
+                &:after {
+                    background-color: $primaryColor;
+                    border-radius: 10px;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translate(-100%, 0) rotate(10deg);
+                    transform-origin: top left;
+                    transition: .2s transform ease-out;
+                    will-change: transform;
+                    z-index: -1;
+                }
+
+                &:hover:after {
+                    transform: translate(0, 0);
+                }
 
                 &:hover {
-                    text-decoration: underline;
-                    cursor: pointer;
+                    border: 2px solid transparent;
+                    color: $secondaryColor;
+                    will-change: transform;
                 }
             }
         }
     }
-    #show-more {
+
+    .show-more {
         font-size: 20pt;
         font-weight: 800;
+        margin-bottom: 30px;
 
         &:hover {
             text-decoration: underline;
         }
-     }
+    }
 }
 
-.brand {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    background-color: white;
 
-    #brand-image {
-        height: 511.6px;
-        &:hover {
-            opacity: 0.9;
-        }
-        img {
-            width: 50vw;
-        }
-    }
+@media (min-width: 150px) and (max-width: 779px) {
 
-    #informations {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        padding: 0 50px;
-        width: 50vw;
-        text-align: center;
-        
-        p {
-            text-align: center;
-            font-size: 14pt;
-        }
-        a {
-            width: 350px;
-            background-color: $primaryColor;
-            padding: 15px;
-            font-size: 15pt;
-            font-weight: 800;
-            color: $secondaryColor;
-            text-align: center;
-            border-radius: 20px;
+    .products {
+        margin: 30px 20px;
 
-            &:hover {
-                transform: scale(1.05)
+        .products-list {
+            .product-one {
+
+                img {
+                    width: 60vw;
+                }
+                .infos {
+                    margin: 15px 10px;
+
+                    #name {
+                            font-size: 12pt;
+                        }
+                    #brand {
+                        font-size: 9pt;
+                    }
+                    #price {
+                        font-size: 12pt;
+                    }
+                }
+                .call-to-action {
+                    margin: auto;
+                    width: 150px;
+                    text-align: center;
+                    border: 2px solid currentColor;
+                    border-radius: 10px;
+                    color: $primaryColor;
+                    font-size: 11pt;
+                    font-weight: 100;
+                    overflow: hidden;
+                    padding: 5px 25px;
+                    position: relative;
+                    text-decoration: none;
+                    transition: .2s transform ease-in-out;
+                    will-change: transform;
+                    z-index: 0;
+                }
             }
         }
     }

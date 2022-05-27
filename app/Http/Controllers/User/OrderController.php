@@ -35,4 +35,29 @@ class OrderController extends Controller
         return redirect('/');
     }
 
+         /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $shopping_cart = new ShoppingCart;
+
+        $Product_id = Product::find($request->Product_id);
+        $user_id = Auth::user('id');
+        $size_id = Size::find($request->size_id);
+        
+        $shopping_cart->Product()->associate($Product_id);
+        $shopping_cart->user()->associate($user_id);
+        $shopping_cart->size()->associate($size_id);
+
+        $shopping_cart->quantity = $request->quantity;
+        
+        $shopping_cart->save();
+
+        return redirect('/user/profile/shopping');
+    }
+
 }

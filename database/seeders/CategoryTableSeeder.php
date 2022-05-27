@@ -27,7 +27,7 @@ class CategoryTableSeeder extends Seeder
             ],
             [
                 'id' => 3,
-                'name' => 'Populaire'
+                'name' => 'Populaires'
             ],
             [
                 'id' => 4,

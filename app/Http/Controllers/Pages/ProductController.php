@@ -1,167 +1,131 @@
 <?php
-
 namespace App\Http\Controllers\Pages;
+use App\Models\Size;
+use App\Models\Brand;
+use App\Models\Color;
+use App\Models\Modele;
 use App\Models\Product;
 use App\Models\Category;
-use App\Models\Brand;
-use App\Models\Size;
-use App\Models\CategoryProduct;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Route;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function all_products()
+    public function all_products ()
     {
-        $products = Product::all();
 
-        return view('pages.products.all-products',
+        $title = 'Toutes les sneakers';
+        $url = '/sneakers';
+        $products = Product::select('*')
+        ->orderBy('price_vat')
+        ->get();
+
+        return view('pages.page-layout',
         [
             'products' => $products,
+            'title' => $title,
+            'url' => $url
         ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Product  $Product
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Product $Product)
+    public function all_season ()
     {
-        $products = Product::all();
-        return view('pages.products.Product-one', 
+        $title = 'Sélection de saison';
+        $category = Category::where('name', 'Sélection de saison')->first();
+        $url = '/sneakers/selection-de-saison'; 
+        $products = $category->products->sortBy('price_vat');
+
+        return view('pages.page-layout',
         [
-            'Product' => $Product,
-            'products' => $products
+            'products' => $products,
+            'title' => $title,
+            'url' => $url
         ]);
     }
 
-     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function all_news ()
     {
-        $shopping_cart = new ShoppingCart;
+        $title = 'Nouveautés';
+        $category = Category::where('name', 'Nouveautés')->first();
+        $url = '/sneakers/nouveautes';
+        $products = $category->products->sortBy('price_vat');
 
-        $Product_id = Product::find($request->Product_id);
-        $user_id = Auth::user('id');
-        $size_id = Size::find($request->size_id);
-        
-        $shopping_cart->Product()->associate($Product_id);
-        $shopping_cart->user()->associate($user_id);
-        $shopping_cart->size()->associate($size_id);
-
-        $shopping_cart->quantity = $request->quantity;
-        
-        $shopping_cart->save();
-
-        return redirect('/user/profile/shopping');
-    }
-
-    public function saison()
-    {
-        $products_season_ids = CategoryProduct::select('product_id')
-        ->where('category_id', 1)
-        ->orderBy('Product_id')
-        ->get();
-        
-        $category = Category::where('id', 1)->first();
-
-        $products_category = Product::whereIn('id', $products_season_ids)->get();
-
-        return view('pages.products.products-list', 
+        return view('pages.page-layout',
         [
-            'products' => $products_category,
-            'category' => $category
-        ]); 
+            'products' => $products,
+            'title' => $title,
+            'url' => $url
+        ]);
     }
-    public function nouveautes()
+    
+    public function all_popular ()
     {
-        $products_news_ids = CategoryProduct::select('product_id')
-        ->where('category_id', 2)
-        ->orderBy('Product_id')
-        ->get();
-        
-        $category = Category::where('id', 2)->first();
+        $title = 'Produits populaires';
+        $category = Category::where('name', 'Populaires')->first();
+        $url = '/sneakers/populaires';
+        $products = $category->products->sortBy('price_vat');
 
-        $products_category = Product::whereIn('id', $products_news_ids)->get();
-
-        return view('pages.products.products-list', 
+        return view('pages.page-layout',
         [
-            'products' => $products_category,
-            'category' => $category
-        ]); 
+            'products' => $products,
+            'title' => $title,
+            'url' => $url
+        ]);
     }
-    public function tendances()
+
+    public function all_discounts ()
     {
-        $products_trends_ids = CategoryProduct::select('Product_id')
-        ->where('category_id', 3)
-        ->orderBy('Product_id')
-        ->get();
-        
-        $category = Category::where('id', 3)->first();
+        $title = 'Produits en promotions';
+        $category = Category::where('name', 'Promotions')->first();
+        $url = '/sneakers/promotions';
+        $products = $category->products->sortBy('price_vat');
 
-        $products_category = Product::whereIn('id', $products_trends_ids)->get();
-
-        return view('pages.products.products-list', 
+        return view('pages.page-layout',
         [
-            'products' => $products_category,
-            'category' => $category
-        ]); 
-    }
-
-    public function promotions()
-    {
-        $products_discounts_ids = CategoryProduct::select('Product_id')
-        ->where('category_id', 4)
-        ->orderBy('Product_id')
-        ->get();
-        
-        $category = Category::where('id', 4)->first();
-
-        $products_category = Product::whereIn('id', $products_discounts_ids)->get();
-
-        return view('pages.products.products-list', 
-        [
-            'products' => $products_category,
-            'category' => $category
-        ]); 
-    }
-
-    public function all_sizes()
-    {
-        $sizes = Size::all();
-        return view('pages.sizes.list', ['sizes' => $sizes,]);
+            'products' => $products,
+            'title' => $title,
+            'url' => $url
+        ]);
     }
 
         /**
-     * Display a listing of the resource.
+     * Remove the specified resource from storage.
      *
+     * @param  String  $slug
      * @return \Illuminate\Http\Response
      */
-    public function all_brands()
+    public function show_product($slug)
     {
-        $brands = Brand::all();
-        return view('pages.brands.brands-list', ['brands' => $brands,]);
+        $product = Product::where('slug', $slug)->first();
+        return view('pages.products.product-one', [
+            'product' => $product
+        ]);
     }
 
     /**
-     * Display the specified resource.
+     * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Brand  $brand
+     * @param  String  $slug
      * @return \Illuminate\Http\Response
      */
-    public function one_brand(Brand $brand)
+    public function show_brand($slug)
     {
+        $brand = Brand::where('slug', $slug)->first();
         return view('pages.brands.brand-one', ['brand' => $brand]);
     }
+
+    
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  String  $slug
+     * @return \Illuminate\Http\Response
+     */
+    public function show_modele($slug)
+    {
+        $brand = Modele::where('slug', $slug)->first();
+        return view('pages.modeles.model-one', ['modele' => $modele]);
+    }
+
 }

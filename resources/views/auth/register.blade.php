@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('main-layout')
 @section('content')
 
 <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">

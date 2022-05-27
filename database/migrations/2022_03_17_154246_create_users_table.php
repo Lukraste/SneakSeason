@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email', 191)->unique();
             $table->string('password', 255);
             $table->string('role')->default('user');
-            $table->integer('max_orders')->default(5);
+            $table->integer('nbr_orders')->default(0);
             $table->string('lastname', 255)->nullable();
             $table->string('firstname', 255)->nullable();
             $table->string('birthdate', 255)->nullable();
@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('phone_number')->unique()->nullable();
             $table->boolean('rgpd')->default(false);
             $table->boolean('newsletters')->default(false);
+            $table->boolean('cookies')->default(false);
             $table->rememberToken();
             $table->timestamps();
             $table->timestamp('email_verified_at')->nullable();

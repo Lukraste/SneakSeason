@@ -15,11 +15,12 @@ class Order extends Model
 
     protected $fillable = [
         'user_id',
-        'color_size_product_id',
+        'inventory_id',
         'quantity',
         'status',
         'date',
-        'total_price_vat'
+        'total_price_vat',
+        'reference_code'
     ];
 
     protected $casts = [

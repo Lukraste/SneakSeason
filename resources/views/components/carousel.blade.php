@@ -39,54 +39,49 @@
   </div>
   <div class="carousel-inner relative w-full overflow-hidden">
     <div class="carousel-item active float-left w-full">
-      <div id="call-to-action">
-        <a href="products/adidas/superstar">Découvrir</a>
-      </div>
+      <a href="/brands/adidas">
       <img
         src="{{ url('storage/images/carousel/carousel-1.jpg') }}"
         class="block w-full"
         alt="Wild Landscape"
       />
+    </a>
     </div>
     <div class="carousel-item float-left w-full">
-      <div id="call-to-action">
-        <a href="products/nike/air-jordan">Découvrir</a>
-      </div>
+      <a href="/brands/nike">
       <img
         src="{{ url('storage/images/carousel/carousel-2.jpg') }}"
         class="block w-full"
         alt="Camera"
       />
+    </a>
     </div>
     <div class="carousel-item float-left w-full">
-      <div id="call-to-action">
-        <a href="products/nike/air-max-90">Découvrir</a>
-      </div>
+      <a href="/brands/nike">
       <img
         src="{{ url('storage/images/carousel/carousel-3.jpg') }}"
         class="block w-full"
         alt="Exotic Fruits"
       />
+      </a>
     </div>
     <div class="carousel-item float-left w-full">
-      <div id="call-to-action">
-        <a href="products/asics/gel-cumulus">Découvrir</a>
-      </div>
+      <a href="/brands/nike">
       <img
         src="{{ url('storage/images/carousel/carousel-4.jpg') }}"
         class="block w-full"
         alt="Exotic Fruits"
       />
+      </a>
     </div>
     <div class="carousel-item float-left w-full">
-      <div id="call-to-action">
-        <a href="products/adidas/air-force-1">Découvrir</a>
-      </div>
+      <a href="/brands/nike">
       <img
         src="{{ url('storage/images/carousel/carousel-5.jpg') }}"
         class="block w-full"
         alt="Exotic Fruits"
       />
+      </a>
     </div>
   </div>
   <button

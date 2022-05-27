@@ -19,53 +19,58 @@ class ColorTableSeeder extends Seeder
 
             [
                 'id' => 1,
-                'name' => 'Rouge',
+                'name' => 'rouge',
                 'image' => 'storage/images/colors/red.png'
             ],
             [
                 'id' => 2,
-                'name'=> 'Blanc',
+                'name'=> 'blanc',
                 'image' => 'storage/images/colors/white.png'
             ],
             [
                 'id' => 3,
-                'name' => 'Vert',
+                'name' => 'vert',
                 'image' => 'storage/images/colors/green.png'
             ],
             [
                 'id' => 4,
-                'name' => 'Noir',
+                'name' => 'noir',
                 'image' => 'storage/images/colors/black.png'
             ],
             [
                 'id' => 5,
-                'name' => 'Brun',
+                'name' => 'beige',
                 'image' => 'storage/images/colors/brown.png'
             ],
             [
                 'id' => 6,
-                'name' => 'Orange',
+                'name' => 'orange',
                 'image' => 'storage/images/colors/orange.png'
             ],
             [
                 'id' => 7,
-                'name' => 'Rose',
+                'name' => 'rose',
                 'image' => 'storage/images/colors/purple.png'
             ],
             [
                 'id' => 8,
-                'name' => 'Gris',
+                'name' => 'gris',
                 'image' => 'storage/images/colors/grey.png'
             ],
             [
                 'id' => 9,
-                'name' => 'Bleu',
+                'name' => 'bleu',
                 'image' => 'storage/images/colors/blue.png'
             ],
             [
                 'id' => 10,
-                'name' => 'Jaune',
+                'name' => 'jaune',
                 'image' => 'storage/images/colors/yellow.png'
+            ],
+            [
+                'id' => 11,
+                'name' => 'multi',
+                'image' => 'storage/images/colors/multi.png'
             ]
         ]);
     }

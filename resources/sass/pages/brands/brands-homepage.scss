@@ -1,0 +1,101 @@
+.brand {
+   display: flex;
+   flex-flow: row nowrap;
+   align-items: center;
+   background-color: white;
+
+   a {
+       &:hover {
+           opacity: 0.9;
+       }
+       img {
+           width: 50vw;
+       }
+   }
+
+   #informations {
+       display: flex;
+       flex-flow: column nowrap;
+       align-items: center;
+       padding: 0 50px 20px 0;
+       width: 50vw;
+       text-align: center;
+       
+       p {
+           text-align: center;
+           font-size: 14pt;
+           margin-bottom: 50px
+       }
+       .call-to-action {
+           margin: auto;
+           width: 400px;
+           text-align: center;
+           border: 2px solid currentColor;
+           border-radius: 10px;
+           color: $primaryColor;
+           font-size: 16pt;
+           font-weight:  100;
+           overflow:  hidden;
+           padding: 10px 25px;
+           position:  relative;
+           text-decoration:  none;
+           transition:  .2s transform ease-in-out;
+           will-change : transform;
+           z-index:  0;
+
+           &:after {
+               background-color: $primaryColor;
+               border-radius:  10px;
+               content: '';
+               display:  block;
+               height:  100%;
+               width:  100%;
+               position:  absolute;
+               left:  0;
+               top:  0;
+               transform:  translate(-100%, 0) rotate(10deg);
+               transform-origin:  top left;
+               transition:  .2s transform ease-out;
+               will-change:  transform;
+               z-index: -1;
+           }
+           
+           &:hover:after {
+               transform: translate(0, 0);
+           }
+
+           &:hover {
+               border: 2px solid transparent;
+               color: $secondaryColor;
+               will-change: transform;
+               transform: scale(1.05);
+           }
+       }
+   }
+
+   @media (min-width: $breakpointSmall) and (max-width: $breakpointMedium) {
+       flex-flow: column nowrap;
+       justify-content: center;
+
+       a {
+           img {
+               width: 100vw;
+           }
+       }
+       #informations {
+           padding: 20px 0px;
+           width: 85vw;
+           text-align: center;
+           
+           p {
+               font-size: 12pt;
+               margin-bottom: 20px
+           }
+           .call-to-action {
+               width: 80vw;
+               font-size: 14pt;
+           }
+       }
+   }
+}
+

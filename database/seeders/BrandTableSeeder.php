@@ -22,32 +22,37 @@ class BrandTableSeeder extends Seeder
             [
                 'id' => 1,
                 'name' => 'Nike',
-                'description' => $faker->text($maxNbChars = 400),
-                'image' => 'storage/images/brands/nike-logo.png'
+                'slug' => 'nike',
+                'description' => $faker->text($maxNbChars = 500),
+                'image' => '/nike-logo.png'
             ],
             [
                 'id' => 2,
                 'name' => 'Adidas',
-                'description' => $faker->text($maxNbChars = 400),
-                'image' => 'storage/images/brands/adidas-logo.png'
+                'slug' => 'adidas',
+                'description' => $faker->text($maxNbChars = 500),
+                'image' => '/adidas-logo.png'
             ],
             [
                 'id' => 3,
                 'name' => 'Puma',
-                'description' => $faker->text($maxNbChars = 400),
-                'image' => 'storage/images/brands/puma-logo.png'
+                'slug' => 'puma',
+                'description' => $faker->text($maxNbChars = 500),
+                'image' => '/puma-logo.png'
             ],
             [
                 'id' => 4,
                 'name' => 'Asics',
-                'description' => $faker->text($maxNbChars = 400),
-                'image' => 'storage/images/brands/asics-logo.png'
+                'slug' => 'asics',
+                'description' => $faker->text($maxNbChars = 500),
+                'image' => '/asics-logo.png'
             ],
             [
                 'id' => 5,
                 'name' => 'New Balance',
-                'description' => $faker->text($maxNbChars = 400),
-                'image' => 'storage/images/brands/new-balance-logo.png'
+                'slug' => 'new-balance',
+                'description' => $faker->text($maxNbChars = 500),
+                'image' => '/new-balance-logo.png'
             ]
         ]);
     }

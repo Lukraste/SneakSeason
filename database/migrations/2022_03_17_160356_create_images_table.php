@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Color;
 use App\Models\Product;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -19,7 +18,6 @@ return new class extends Migration
             $table->id();
             $table->string('path')->unique();
             $table->foreignIdFor(Product::class);
-            $table->foreignIdFor(Color::class);
             $table->timestamps();
         });
     }

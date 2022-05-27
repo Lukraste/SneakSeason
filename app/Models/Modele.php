@@ -1,16 +1,25 @@
 <?php
+
 namespace App\Models;
 
+use App\Models\Brand;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Color extends Model
+class Modele extends Model
 {
+    
     protected $fillable = [
         'name',
-        'image'
+        'brand_id'
     ];
+
+    public function brand(): BelongsTo
+    {
+        return $this->belongsTo(Brand::class);
+    }
 
     public function products(): HasMany
     {

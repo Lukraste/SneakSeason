@@ -20,133 +20,51 @@ class SizeTableSeeder extends Seeder
 
             [
                 'id' => 1,
-                'size' => 37,
-                'type' => 'EU'
+                'value' => 37
             ],
             [
                 'id' => 2,
-                'size' => 38,
-                'type' => 'EU'
+                'value' => 38
             ],
             [
                 'id' => 3,
-                'size' => 39,
-                'type' => 'EU'
+                'value' => 39
             ],
             [
                 'id' => 4,
-                'size' => 40,
-                'type' => 'EU'
+                'value' => 40
             ],
             [
                 'id' => 5,
-                'size' => 41,
-                'type' => 'EU'
+                'value' => 41
             ],
             [
                 'id' => 6,
-                'size' => 42,
-                'type' => 'EU'
+                'value' => 42
             ],
             [
                 'id' => 7,
-                'size' => 43,
-                'type' => 'EU'
+                'value' => 43
             ],
             [
                 'id' => 8,
-                'size' => 44,
-                'type' => 'EU'
+                'value' => 44
             ],
             [
                 'id' => 9,
-                'size' => 45,
-                'type' => 'EU'
+                'value' => 45
             ],
             [
                 'id' => 10,
-                'size' => 46,
-                'type' => 'EU'
+                'value' => 46
             ],
             [
                 'id' => 11,
-                'size' => 47,
-                'type' => 'EU'
+                'value' => 47
             ],
             [
                 'id' => 12,
-                'size' => 48,
-                'type' => 'EU'
-            ],
-            [
-                'id' => 13,
-                'size' => 5,
-                'type' => 'US'
-            ],
-            [
-                'id' => 14,
-                'size' => 6,
-                'type' => 'US'
-            ],
-            [
-                'id' => 15,
-                'size' => 7,
-                'type' => 'US'
-            ],
-            [
-                'id' => 16,
-                'size' => 7.5,
-                'type' => 'US'
-            ],
-            [
-                'id' => 17,
-                'size' => 8,
-                'type' => 'US'
-            ],
-            [
-                'id' => 18,
-                'size' => 8.5,
-                'type' => 'US'
-            ],
-            [
-                'id' => 19,
-                'size' => 9,
-                'type' => 'US'
-            ],
-            [
-                'id' => 20,
-                'size' => 9.5,
-                'type' => 'US'
-            ],
-            [
-                'id' => 21,
-                'size' => 10,
-                'type' => 'US'
-            ],
-            [
-                'id' => 22,
-                'size' => 10.5,
-                'type' => 'US'
-            ],
-            [
-                'id' => 23,
-                'size' => 11,
-                'type' => 'US'
-            ],
-            [
-                'id' => 24,
-                'size' => 12,
-                'type' => 'US'
-            ],
-            [
-                'id' => 25,
-                'size' => 13,
-                'type' => 'US'
-            ],
-            [
-                'id' => 26,
-                'size' => 13.5,
-                'type' => 'US'
+                'value' => 48
             ]
         ]);
     }

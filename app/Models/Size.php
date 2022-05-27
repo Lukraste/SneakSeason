@@ -24,10 +24,4 @@ class Size extends Model
         return $this->belongsToMany(Product::class, 'inventory')
         ->withPivot('color_id');
     }
-
-    public function colors(): BelongsToMany
-    {
-        return $this->belongsToMany(Color::class, 'inventory')
-        ->withPivot('sneaker_id');
-    }
 }

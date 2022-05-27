@@ -5,7 +5,6 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Product;
 use App\Models\Size;
-use App\Models\Color;
 
 return new class extends Migration
 {
@@ -20,8 +19,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Product::class);
             $table->foreignIdFor(Size::class);
-            $table->foreignIdFor(Color::class);
-            $table->integer('quantity');
+            $table->integer('quantity')->default(5);
             $table->timestamps();
         });
     }

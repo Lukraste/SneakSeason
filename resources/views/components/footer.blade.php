@@ -1,31 +1,31 @@
 <footer>
         <div class="mx-auto container py-16 xl:px-20 lg:px-12 sm:px-6 px-4">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4 text-[#dbe1e3] text-sm lg:text-lg">
                 <div class="flex flex-col flex-shrink-0">
                     <h1 class="font-semibold">SneakSeason</h1>
-                    <p class="leading-none text-gray-800 mt-4 dark:text-white">Copyright © 2022 SneakSeason</p>
-                    <p class="leading-none text-gray-800 mt-4 dark:text-white">Tous droits réservés</p>
+                    <p class="leading-none mt-4">Copyright © 2022 SneakSeason</p>
+                    <p class="leading-none mt-4">Tous droits réservés</p>
 
                     @include('components.socials')
 
                 </div>
-                <div class="sm:ml-0 ml-8 flex flex-col">
-                    <h2 class="font-semibold leading-4 text-gray-800 dark:text-white">Contactez-nous !</h2>
-                    <p href="javascript:void(0)" class="focus:outline-none focus:underline text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Tél : +32 xxx.xx.xx.xx</p>
-                    <p href="javascript:void(0)" class="focus:outline-none focus:underline text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">E-mail : contact@sneakeason.be</p>
-                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Formulaire de contact</a>
+                <div class="sm:ml-0 flex flex-col">
+                    <h2 class="font-semibold leading-4">Contactez-nous !</h2>
+                    <p href="javascript:void(0)" class="focus:outline-none focus:underline  leading-4 mt-6 cursor-pointer">Tél : +32 xxx.xx.xx.xx</p>
+                    <p href="javascript:void(0)" class="focus:outline-none focus:underline  leading-4 mt-6 cursor-pointer">E-mail : contact@sneakeason.be</p>
+                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6 cursor-pointer">Formulaire de contact</a>
                 </div>
-                <div class="flex flex-col">
-                    <h2 class="font-semibold leading-4 text-gray-800 dark:text-white">En savoir plus</h2>
-                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Qui sommes-nous ?</a>
-                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Condition générales d'utilisation</a>
-                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Politiques de confidentialité</a>
-                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Cookies</a>
+                <div class="flex mt-4 flex-col">
+                    <h2 class="font-semibold leading-4 ">En savoir plus</h2>
+                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6 cursor-pointer">Qui sommes-nous ?</a>
+                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6  cursor-pointer">Condition générales d'utilisation</a>
+                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6  cursor-pointer">Politiques de confidentialité</a>
+                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6  cursor-pointer">Cookies</a>
                 </div>
                 <div class="mt-10 lg:block hidden">
-                    <label class="text-lg font-medium leading-5 text-gray-800 dark:text-white">S'abonner à la newsletter</label>
+                    <label class="text-lg font-medium leading-5 ">S'abonner à la newsletter</label>
                     <div class="cursor-pointer flex items-center justify-between border border-gray-800 dark:border-white mt-4">
-                        <input type="text" class="text-base leading-4 p-4 w-full focus:outline-none text-gray-800 dark:text-white dark:placeholder-white dark:bg-gray-900 dark:border-white placeholder-gray-800" placeholder="Votre adresse e-mail" />
+                        <input type="text" class=" leading-4 p-4 w-full focus:outline-none  dark:placeholder-white dark:bg-gray-900 dark:border-white placeholder-gray-800" placeholder="Votre adresse e-mail" />
                         <button aria-label="send" class="mr-4 fill-current text-gray-800 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
                             <svg class="dark:text-white dark:hover:text-gray-200" width="16" height="17" viewBox="0 0 16 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -38,9 +38,9 @@
                 </div>
             </div>
             <div class="mt-10 lg:hidden">
-                <label class="font-medium leading-5 text-gray-800 dark:text-white">S'abonner à la newsletter</label>
+                <label class="font-medium leading-5 ">S'abonner à la newsletter</label>
                 <div class="flex items-center justify-between border border-gray-800 dark:border-white mt-4">
-                    <input type="text" class="text-base leading-4 p-4 relative z-0 w-full focus:outline-none text-gray-800 placeholder-gray-800 dark:text-white dark:placeholder-white dark:border-white dark:bg-gray-900" placeholder="Enter your email" />
+                    <input type="text" class=" leading-4 p-4 relative z-0 w-full focus:outline-none text-gray-800 placeholder-gray-800 dark:text-white dark:placeholder-white dark:border-white dark:bg-gray-900" placeholder="Enter your email" />
                     <button aria-label="send" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer mr-4 cursor-pointer relative z-40">
                         <svg class="fill-current text-gray-800 hover:underline dark:text-white dark:hover:text-gray-200" width="16" height="17" viewBox="0 0 16 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path

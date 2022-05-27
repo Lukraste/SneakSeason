@@ -1,29 +1,25 @@
 <header>
 
-    <div id="main">
+   <div id="main">
 
-        <!-- Logos des réseaux sociaux -->
+       <!-- Logos des réseaux sociaux -->
 
-        @include('components.socials')
+       @include('components.socials')
 
-        <!-- Logo principal cliquable -->
+       <!-- Logo principal cliquable -->
 
-        <div id="logo">
-            <a href="/">
-                <img src="{{ asset('storage/images/logos/raccoon-logo.png')}}" alt="logo-sneakseason">
-            </a>
-        </div>
+       <div id="logo">
+           <a href="/">
+               <img src="{{ asset('storage/images/logos/raccoon-logo.png')}}" alt="logo-sneakseason">
+           </a>
+       </div>
 
-        <!-- Fonctionnalités utilisateur -->
+       <!-- Fonctionnalités utilisateur -->
 
-        @include('components.features')
-    </div>
+       @include('components.features')
+   </div>
 
-     <!-- Barre de navigation-->
+    <!-- Barre de navigation-->
 
-     @include('components.navbar')
-
-      <!-- Carousel d'images -->
-
-     @include('components.carousel')
+    @include('components.navbar')
 </header>

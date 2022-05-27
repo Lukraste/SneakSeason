@@ -1,7 +1,12 @@
 @import 'variables',
         'components/header',
         'components/footer',
-        'pages/products/products-all';
+        'components/breadcrumb',
+        'pages/products/products-all',
+        'pages/products/product-one',
+        'pages/brands/brand-one',
+        'pages/brands/brands-homepage';
+
 
 
 html {

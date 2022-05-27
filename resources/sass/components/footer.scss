@@ -1,35 +1,36 @@
 footer {
     background-color: $primaryColor;
     color: $secondaryColor;
-
-    h1 {
-       font-size: 3vh;
-    }
     
-    h2 {
-      font-size: 2vh;
-   }
-   
-   a, p, label {
-      font-size: 1.5vh;
-   }
-    
-    #socials {
-        display: flex;
-        flex-flow: row nowrap;
-        margin-top: 15px;
-        margin-bottom: 40px;
+    .container {
+      margin-top:0;
+      margin-bottom:0;
+       
+      h1 {
+         font-size: 20pt;
+      }
+      h2 {
+         font-size: 15pt;
+      }
+      #socials {
+         display: flex;
+         flex-flow: row nowrap;
+         margin-top: 15px;
+         margin-bottom: 40px;
         
-        a {
-           padding-right: 10px;
-           img {
-              width: 3vh;
-              height: auto;
-              filter: brightness(0) invert(1);
+         a {
+            padding-right: 10px;
+
+            img {
+               width: 3vh;
+               height: auto;
+               filter: brightness(0) invert(1);
      
-              &:hover {
-                 transform: scale(1.1);               }
-           }
-        }
-     }
+               &:hover {
+                  transform: scale(1.1);
+               }
+            }
+         }
+      }
+   }
 }

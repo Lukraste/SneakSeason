@@ -11,11 +11,11 @@ header {
       padding: 5vh 3vw 2vh 3vw;
       
       #logo {
-         margin-top: 1vh;
+         margin-top: 2vh;
          a {
             img {
                margin: auto;
-               width: 15vh;
+               width: 14vh;
             }
          }
       }
@@ -26,13 +26,15 @@ header {
          
          a {
             padding-right: 10px;
+            
             img {
                width: 3vh;
                height: auto;
                filter: brightness(0) invert(1);
       
                &:hover {
-                  transform: scale(1.1);               }
+                  transform: scale(1.1);
+               }
             }
          }
       }
@@ -78,21 +80,9 @@ header {
          transform-origin: bottom left;
        }
     }
-    #call-to-action {
-       a {
-         position: absolute;
-         top: 60%;
-         left: 43%;
-         width: 15vw;
-         text-align: center;
-         background-color: $primaryColor;
-         padding: 10px 20px;
-         border-radius: 25px;
-         font-size: 1.5vw;
-
-         &:hover {
-            transform: scale(1.05);
-         }
+    @media (min-width:150px) and (max-width:400px) {
+       .navbar {
+          font-size: 7pt;
        }
     }
 }
