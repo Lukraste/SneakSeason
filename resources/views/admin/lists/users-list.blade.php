@@ -5,7 +5,7 @@
 @include('components.admin-navbar')
 
 <div class="flex flex-col m-auto mt-8 mb-40 container">
-      <h1>Liste des produits</h1>
+      <h1>Liste des utilisateurs</h1>
       <div class="overflow-x-auto sm:-mx-2 lg:-mx-8">
         <div class="py-2 inline-block min-w-full sm:px-4 lg:px-8">
           <div class="overflow-hidden">

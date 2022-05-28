@@ -1,18 +1,18 @@
 <footer>
         <div class="mx-auto container py-16 xl:px-20 lg:px-12 sm:px-6 px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4 text-[#dbe1e3] text-sm lg:text-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 md:gap-8 gap-4 text-[#dbe1e3] text-sm lg:text-lg">
                 <div class="flex flex-col flex-shrink-0">
-                    <h1 class="font-semibold">SneakSeason</h1>
-                    <p class="leading-none mt-4">Copyright © 2022 SneakSeason</p>
-                    <p class="leading-none mt-4">Tous droits réservés</p>
+                    <h1 class="font-semibold mr-36" >SneakSeason</h1>
+                    <p class="leading-none">Copyright © 2022 SneakSeason</p>
+                    <p class="leading-none">Tous droits réservés</p>
 
                     @include('components.socials')
 
                 </div>
                 <div class="flex mt-8 pt-6 flex-col">
                     <h2 class="font-semibold leading-2 ">En savoir plus</h2>
-                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6 cursor-pointer">Qui sommes-nous ?</a>
-                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6  cursor-pointer">Politiques de confidentialité</a>
+                    <a href="{{route('who')}}" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6 cursor-pointer">Qui sommes-nous ?</a>
+                    <a href="{{route('rgpd')}}" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6  cursor-pointer">Politiques de confidentialité</a>
                 </div>
                 
             <div class="flex mt-8 pt-6 flex-col">
@@ -21,7 +21,7 @@
                 <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6  cursor-pointer">contact@sneakseason.be</a>
             </div>
 
-                <div class="mt-10 lg:block hidden">
+                <!-- <div class="mt-10 lg:block hidden">
                     <label class="text-lg font-medium leading-4 ">S'abonner à la newsletter</label>
                     <div class="cursor-pointer flex items-center justify-between border border-gray-800 dark:border-white mt-4">
                         <input type="text" class=" leading-4 p-4 w-full focus:outline-none  dark:placeholder-white dark:bg-gray-900 dark:border-white placeholder-gray-800" placeholder="Votre adresse e-mail" />
@@ -34,7 +34,7 @@
                             </svg>
                         </button>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="mt-10 lg:hidden">

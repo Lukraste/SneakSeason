@@ -9,13 +9,13 @@
           <ul class="image-list">
 
             @foreach ($product->images as $image)
-              <li class="image-item"><img src="{{asset('storage/images/products/'.$image->path)}}"></li>
+              <li class="image-item"><img src="{{asset('images/products/'.$image->path)}}"></li>
             @endforeach
           </ul>
 
           @foreach ($product->images->take(1) as $image)
             <div class="product-image">
-              <img class="active" src="{{asset('storage/images/products/'.$image->path)}}">
+              <img class="active" src="{{asset('images/products/'.$image->path)}}">
             </div>
           @endforeach
         </div>
@@ -96,7 +96,7 @@
           <div class="product-one" @if($similarProduct->name == $product->name) hidden @endif>
             @foreach ($similarProduct->images->take(1) as $image)
               <a class="relative overflow-hidden bg-no-repeat bg-cover" id="image" href="{{ route('sneakers.show', ['slug' => $similarProduct->slug, 'id']) }}">
-                <img class="max-w-xs hover:scale-125 transition duration-500 ease-in-out" src="{{asset('storage/images/products/'.$image->path) }}" alt="{{ $similarProduct->slug }}">
+                <img class="max-w-xs hover:scale-125 transition duration-500 ease-in-out" src="{{asset('images/products/'.$image->path) }}" alt="{{ $similarProduct->slug }}">
               </a>
             @endforeach
             <div class="infos">

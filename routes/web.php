@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\User\OrderController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Pages\IndexController;
@@ -13,9 +14,8 @@ use App\Http\Controllers\Admin\ProductAdminController;
 Route::controller(IndexController::class)
     ->group(function () {
         Route::get('/', 'index');
-        Route::get('/conditions-generales-d-utilisation', 'cgu')->name('cgu');
         Route::get('/politique-de-confidentialite', 'rgpd')->name('rgpd');
-        Route::get('/cookies', 'rgpd')->name('cookies');
+        Route::get('/qui-sommes-nous', 'who')->name('who');
 });
 
 Route::controller(ProductController::class)
@@ -59,3 +59,4 @@ Route::controller(AdminController::class)
 
         Route::resource('/products', ProductAdminController::class);
 });
+

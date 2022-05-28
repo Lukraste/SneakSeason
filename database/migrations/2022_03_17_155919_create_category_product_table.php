@@ -20,7 +20,6 @@ return new class extends Migration
             $table->foreignId('product_id')->onDelete('cascade');
             $table->foreignId('category_id');
             $table->timestamps();
-            $table->engine = 'InnoDB';
         });
     }
 

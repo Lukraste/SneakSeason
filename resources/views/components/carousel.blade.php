@@ -41,7 +41,7 @@
     <div class="carousel-item active float-left w-full">
       <a href="/brands/adidas">
       <img
-        src="{{ url('storage/images/carousel/carousel-1.jpg') }}"
+        src="{{ url('images/carousel/carousel-1.jpg') }}"
         class="block w-full"
         alt="Wild Landscape"
       />
@@ -50,7 +50,7 @@
     <div class="carousel-item float-left w-full">
       <a href="/brands/nike">
       <img
-        src="{{ url('storage/images/carousel/carousel-2.jpg') }}"
+        src="{{ url('images/carousel/carousel-2.jpg') }}"
         class="block w-full"
         alt="Camera"
       />
@@ -59,7 +59,7 @@
     <div class="carousel-item float-left w-full">
       <a href="/brands/nike">
       <img
-        src="{{ url('storage/images/carousel/carousel-3.jpg') }}"
+        src="{{ url('images/carousel/carousel-3.jpg') }}"
         class="block w-full"
         alt="Exotic Fruits"
       />
@@ -68,7 +68,7 @@
     <div class="carousel-item float-left w-full">
       <a href="/brands/nike">
       <img
-        src="{{ url('storage/images/carousel/carousel-4.jpg') }}"
+        src="{{ url('images/carousel/carousel-4.jpg') }}"
         class="block w-full"
         alt="Exotic Fruits"
       />
@@ -77,7 +77,7 @@
     <div class="carousel-item float-left w-full">
       <a href="/brands/nike">
       <img
-        src="{{ url('storage/images/carousel/carousel-5.jpg') }}"
+        src="{{ url('images/carousel/carousel-5.jpg') }}"
         class="block w-full"
         alt="Exotic Fruits"
       />

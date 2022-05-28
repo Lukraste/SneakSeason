@@ -843,6 +843,16 @@ footer .container #socials a img:hover {
   transform: scale(1.05);
 }
 
+#content {
+  margin: 100px 200px;
+}
+#content h1, #content h2, #content h3 {
+  margin: 20px 0;
+}
+#content p {
+  margin-bottom: 30px;
+}
+
 html body {
   background-color: #dbe1e3;
   font-family: "Raleway", sans-serif;

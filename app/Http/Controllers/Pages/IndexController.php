@@ -33,12 +33,8 @@ class IndexController extends Controller
     {
         return view('pages.about.rgpd');
     }
-    public function cgu()
+    public function who()
     {
-        return view('pages.about.cgu');
-    }
-    public function cookies()
-    {
-        return view('pages.about.cookies');
+        return view('pages.about.whoarewe');
     }
 }

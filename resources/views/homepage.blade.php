@@ -14,7 +14,7 @@
             <div class="product-one">
                 @foreach ($product->images->take(1) as $image)
                 <a class="relative overflow-hidden bg-no-repeat bg-cover" id="image" href="{{ route('sneakers.show', ['slug' => $product->slug, 'id']) }}">
-                    <img class="max-w-xs hover:scale-125 transition duration-500 ease-in-out" src="{{asset('storage/images/products/'.$image->path) }}" alt="{{ $product->slug }}">
+                    <img class="max-w-xs hover:scale-125 transition duration-500 ease-in-out" src="{{asset('images/products/'.$image->path) }}" alt="{{ $product->slug }}">
                 </a>
                 @endforeach
                 <div class="infos">
@@ -34,7 +34,7 @@
 {{-- Bannière de la marque Nike --}}
 
 <div class="brand">
-    <a href="{{ route('brands.show', ['slug' => $brand_nike->slug]) }}"><img src="{{asset('storage/images/brands/banners/nike-banner.jpg')}}" alt="nike-banner"></a>
+    <a href="{{ route('brands.show', ['slug' => $brand_nike->slug]) }}"><img src="{{asset('images/brands/banners/nike-banner.jpg')}}" alt="nike-banner"></a>
     <div id="informations">
         <p>
             Nike est une entreprise américaine spécialisée dans les chaussures, les vêtements et le matériel de sport.
@@ -57,7 +57,7 @@
             <div class="product-one">
                 @foreach ($product->images->take(1) as $image)
                 <a class="relative overflow-hidden bg-no-repeat bg-cover" id="image" href="{{ route('sneakers.show', ['slug' => $product->slug, 'id']) }}">
-                    <img class="max-w-xs hover:scale-125 transition duration-500 ease-in-out" src="{{asset('storage/images/products/'.$image->path) }}" alt="{{ $product->slug }}">
+                    <img class="max-w-xs hover:scale-125 transition duration-500 ease-in-out" src="{{asset('images/products/'.$image->path) }}" alt="{{ $product->slug }}">
                 </a>
                 @endforeach
                 <div class="infos">
@@ -84,6 +84,6 @@
         </p>
         <a href="{{ route('brands.show', ['slug' => $brand_nike->slug]) }}" class="call-to-action">Découvrir notre collection Adidas</a>
     </div>
-    <a href="{{ route('brands.show', ['slug' => $brand_nike->slug]) }}"><img src="{{asset('storage/images/brands/banners/adidas-banner.jpg')}}" alt="adidas-banner"></a>
+    <a href="{{ route('brands.show', ['slug' => $brand_nike->slug]) }}"><img src="{{asset('images/brands/banners/adidas-banner.jpg')}}" alt="adidas-banner"></a>
 </div>
 @endsection

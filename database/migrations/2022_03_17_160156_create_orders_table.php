@@ -29,7 +29,6 @@ return new class extends Migration
             $table->float('total_price_vat');
             $table->string('reference_code');
             $table->timestamps();
-            $table->engine = 'InnoDB';
         });
     }
 

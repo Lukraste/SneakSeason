@@ -5,7 +5,7 @@
 
 <div class="products">
    <a href="{{ route('brands.show', ['slug' => $brand->slug]) }}">
-      <img class="brand-image" src="{{ url('storage/images/brands/logos'.$brand->image)}}" alt="logo-{{ $brand->slug}}">
+      <img class="brand-image" src="{{ url('images/brands/logos'.$brand->image)}}" alt="logo-{{ $brand->slug}}">
    </a>
    <p>{{ $brand->products->count() }} produits</p>
       <div class="products-list">
@@ -13,7 +13,7 @@
             <div class="product-one">
                   @foreach ($product->images->take(1) as $image)
                   <a class="relative overflow-hidden bg-no-repeat bg-cover" id="image" href="{{ route('sneakers.show', ['slug' => $product->slug, 'id']) }}">
-                     <img class="max-w-xs hover:scale-125 transition duration-500 ease-in-out" src="{{asset('storage/images/products/'.$image->path) }}" alt="{{ $product->slug }}">
+                     <img class="max-w-xs hover:scale-125 transition duration-500 ease-in-out" src="{{asset('images/products/'.$image->path) }}" alt="{{ $product->slug }}">
                   </a>
                   @endforeach
                   <div class="infos">

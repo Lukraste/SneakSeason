@@ -10,7 +10,7 @@
 
        <div id="logo">
            <a href="/">
-               <img src="{{ asset('storage/images/logos/raccoon-logo.png')}}" alt="logo-sneakseason">
+               <img src="{{ asset('images/logos/raccoon-logo.png')}}" alt="logo-sneakseason">
            </a>
        </div>
 

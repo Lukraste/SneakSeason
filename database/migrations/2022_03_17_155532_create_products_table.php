@@ -31,7 +31,6 @@ return new class extends Migration
             $table->foreignId('color_id')->constrained();
             $table->foreignId('collection_id')->onDelete('cascade');
             $table->timestamps();
-            $table->engine = 'InnoDB';
         });
     }
 
