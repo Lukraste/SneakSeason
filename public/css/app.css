@@ -38,13 +38,20 @@ header #main #features {
   justify-content: space-around;
 }
 header #main #features a {
-  padding-right: 10px;
+  padding-right: 12px;
 }
 header #main #features a img {
   width: 3vh;
   filter: brightness(0) invert(1);
 }
 header #main #features a img:hover {
+  transform: scale(1.1);
+}
+header #main #features form button img {
+  width: 3vh;
+  filter: brightness(0) invert(1);
+}
+header #main #features form button img:hover {
   transform: scale(1.1);
 }
 header #hover-underline-animation {
@@ -76,10 +83,12 @@ header #hover-underline-animation:hover:after {
 footer {
   background-color: #171730;
   color: #dbe1e3;
+  padding: auto;
 }
 footer .container {
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 40px;
 }
 footer .container h1 {
   font-size: 20pt;
@@ -337,7 +346,7 @@ footer .container #socials a img:hover {
 .container-product .details-product .form-product .buttons {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .container-product .details-product .form-product .buttons .call-to-action {
   width: 30vw;
@@ -389,7 +398,7 @@ footer .container #socials a img:hover {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-top: 35px;
+  margin-top: 10px;
 }
 .container-product .details-product .description h3 {
   font-size: 12pt;
@@ -419,6 +428,7 @@ footer .container #socials a img:hover {
   width: 30px;
   height: 50px;
   margin-left: 20px;
+  margin-bottom: 30px;
 }
 
 .ac-footer .ac-icon-love-dark {
@@ -753,6 +763,84 @@ footer .container #socials a img:hover {
     width: 80vw;
     font-size: 14pt;
   }
+}
+
+.call-to-action {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 200px;
+  text-align: center;
+  border: 2px solid currentColor;
+  border-radius: 10px;
+  color: #dbe1e3;
+  font-size: 12pt;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 10px 25px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+.call-to-action:after {
+  background-color: #dbe1e3;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+.call-to-action:hover:after {
+  transform: translate(0, 0);
+}
+.call-to-action:hover {
+  border: 2px solid transparent;
+  color: #171730;
+  will-change: transform;
+}
+
+.container h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-size: 25pt;
+}
+.container a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.container form input:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.admin-navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 50px 0px;
+}
+.admin-navbar a {
+  font-size: 12pt;
+  margin: 0 15px 50px 15px;
+  background-color: #171730;
+  color: #dbe1e3;
+  padding: 15px 30px;
+  border-radius: 15px;
+}
+.admin-navbar a:hover {
+  transform: scale(1.05);
 }
 
 html body {

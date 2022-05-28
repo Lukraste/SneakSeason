@@ -1,11 +1,18 @@
 <div id="features">
-   <a href="/mon-compte/commandes">
-       <img class="white" src="{{ asset('storage/images/icons/shopping-cart.png')}}"alt="account-icon">
+   <a href="{{ route('user.orders') }}">
+       <img src="{{ asset('storage/images/icons/shopping-cart.png')}}"alt="account-icon">
    </a>
-   <a href="/mon-compte/favoris">
-       <img class="white" src="{{ asset('storage/images/icons/heart.png')}}"alt="account-icon">
+   <a href="{{ route('user.favoris') }}">
+       <img  src="{{ asset('storage/images/icons/heart.png')}}"alt="account-icon">
    </a>
-   <a href="/mon-compte">
+   <a href="{{ route('user.index') }}">
        <img class="white" src="{{ asset('storage/images/icons/account.png')}}"alt="account-icon">
    </a>
+
+   <form action="{{ route('logout') }}" method="post">
+    @csrf
+        <button type="submit">
+            <img src="{{ asset('storage/images/icons/exit.png')}}"alt="account-icon">
+        </button>
+   </form>
 </div>

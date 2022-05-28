@@ -33,7 +33,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 1,
-                'modele_id' => 2
+                'collection_id' => 2
             ],
             [
                 'id' => 2,
@@ -48,7 +48,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 6,
-                'modele_id' => 2
+                'collection_id' => 2
             ],
             [
                 'id' => 3,
@@ -63,7 +63,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 5,
-                'modele_id' => 2
+                'collection_id' => 2
             ],
             [
                 'id' => 4,
@@ -78,7 +78,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 11,
-                'modele_id' => 3
+                'collection_id' => 3
             ],
             [
                 'id' => 5,
@@ -93,7 +93,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 8,
-                'modele_id' => 3
+                'collection_id' => 3
             ],
             [
                 'id' => 6,
@@ -108,7 +108,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 3,
-                'modele_id' => 3
+                'collection_id' => 3
             ],
             [
                 'id' => 7,
@@ -123,7 +123,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 9,
-                'modele_id' => 3
+                'collection_id' => 3
             ],
             [
                 'id' => 8,
@@ -138,7 +138,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 10,
-                'modele_id' => 3
+                'collection_id' => 3
             ],
             [
                 'id' => 9,
@@ -153,7 +153,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 6,
-                'modele_id' => 4
+                'collection_id' => 4
             ],
             [
                 'id' => 10,
@@ -168,7 +168,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 3,
-                'modele_id' => 4
+                'collection_id' => 4
             ],
             [
                 'id' => 11,
@@ -183,7 +183,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 11,
-                'modele_id' => 4
+                'collection_id' => 4
             ],
             [
                 'id' => 12,
@@ -198,7 +198,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 1,
                 'color_id' => 7,
-                'modele_id' => 4
+                'collection_id' => 4
             ],
             [
                 'id' => 13,
@@ -213,7 +213,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 2,
                 'color_id' => 3,
-                'modele_id' => 10
+                'collection_id' => 10
             ],
             [
                 'id' => 14,
@@ -228,7 +228,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 2,
                 'color_id' => 8,
-                'modele_id' => 10
+                'collection_id' => 10
             ],
             [
                 'id' => 15,
@@ -243,7 +243,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 2,
                 'color_id' => 9,
-                'modele_id' => 10
+                'collection_id' => 10
             ],
             [
                 'id' => 16,
@@ -258,7 +258,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 2,
                 'color_id' => 4,
-                'modele_id' => 10
+                'collection_id' => 10
             ],
             [
                 'id' => 17,
@@ -273,7 +273,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 2,
                 'color_id' => 2,
-                'modele_id' => 9
+                'collection_id' => 9
             ],
             [
                 'id' => 18,
@@ -288,7 +288,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 2,
                 'color_id' => 6,
-                'modele_id' => 9
+                'collection_id' => 9
             ],
             [
                 'id' => 19,
@@ -303,7 +303,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 2,
                 'color_id' => 8,
-                'modele_id' => 9
+                'collection_id' => 9
             ],
             [
                 'id' => 20,
@@ -318,7 +318,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 2,
                 'color_id' => 2,
-                'modele_id' => 11
+                'collection_id' => 11
             ],
             [
                 'id' => 21,
@@ -333,7 +333,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 2,
                 'color_id' => 4,
-                'modele_id' => 11
+                'collection_id' => 11
             ],
             [
                 'id' => 22,
@@ -348,7 +348,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 3,
                 'color_id' => 11,
-                'modele_id' => 8
+                'collection_id' => 8
             ],
             [
                 'id' => 23,
@@ -363,7 +363,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 3,
                 'color_id' => 4,
-                'modele_id' => 8
+                'collection_id' => 8
             ],
             [
                 'id' => 24,
@@ -378,7 +378,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 3,
                 'color_id' => 7,
-                'modele_id' => 8
+                'collection_id' => 8
             ],
             [
                 'id' => 25,
@@ -393,7 +393,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 3,
                 'color_id' => 1,
-                'modele_id' => 8
+                'collection_id' => 8
             ],
             [
                 'id' => 26,
@@ -408,7 +408,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 3,
                 'color_id' => 2,
-                'modele_id' => 8
+                'collection_id' => 8
             ],
             [
                 'id' => 27,
@@ -423,7 +423,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 4,
                 'color_id' => 6,
-                'modele_id' => 8
+                'collection_id' => 6
             ],
             [
                 'id' => 28,
@@ -438,7 +438,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 4,
                 'color_id' => 9,
-                'modele_id' => 6
+                'collection_id' => 6
             ],
             [
                 'id' => 29,
@@ -453,7 +453,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 4,
                 'color_id' => 2,
-                'modele_id' => 6
+                'collection_id' => 6
             ],
             [
                 'id' => 30,
@@ -468,7 +468,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 4,
                 'color_id' => 9,
-                'modele_id' => 7
+                'collection_id' => 7
             ],
             [
                 'id' => 31,
@@ -483,7 +483,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 4,
                 'color_id' => 1,
-                'modele_id' => 7
+                'collection_id' => 7
             ],
             [
                 'id' => 32,
@@ -498,7 +498,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 4,
                 'color_id' => 5,
-                'modele_id' => 7
+                'collection_id' => 7
             ],
             [
                 'id' => 33,
@@ -513,7 +513,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 5,
                 'color_id' => 5,
-                'modele_id' => 1
+                'collection_id' => 1
             ],
             [
                 'id' => 34,
@@ -528,7 +528,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 5,
                 'color_id' => 3,
-                'modele_id' => 1
+                'collection_id' => 1
             ],
             [
                 'id' => 35,
@@ -543,7 +543,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 5,
                 'color_id' => 7,
-                'modele_id' => 1
+                'collection_id' => 1
 
             ],
             [
@@ -559,7 +559,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 5,
                 'color_id' => 1,
-                'modele_id' => 1
+                'collection_id' => 1
             ],
             [
                 'id' => 37,
@@ -574,11 +574,11 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 5,
                 'color_id' => 1,
-                'modele_id' => 1
+                'collection_id' => 1
             ],
             [
                 'id' => 38,
-                'name' => 'Foam X Hiero Rouge',
+                'name' => 'Foam X Hierro Rouge',
                 'slug' => 'foam-x-hierro-rouge',
                 'price_vat' => rand(50, 1000),
                 'be_vat' => 21,
@@ -589,7 +589,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 5,
                 'color_id' => 5,
-                'modele_id' => 1
+                'collection_id' => 5
             ],
             [
                 'id' => 39,
@@ -604,7 +604,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 5,
                 'color_id' => 5,
-                'modele_id' => 1
+                'collection_id' => 5
             ],
             [
                 'id' => 40,
@@ -619,7 +619,7 @@ class ProductTableSeeder extends Seeder
                 'description' => $faker->text($maxNbChars = 250),
                 'brand_id' => 5,
                 'color_id' => 5,
-                'modele_id' => 1
+                'collection_id' => 5
             ]
         ]);
     }

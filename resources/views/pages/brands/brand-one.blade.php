@@ -1,6 +1,8 @@
 @extends('main-layout')
 @section('content')
 
+@include('components.breadcrumb')
+
 <div class="products">
    <a href="{{ route('brands.show', ['slug' => $brand->slug]) }}">
       <img class="brand-image" src="{{ url('storage/images/brands/logos'.$brand->image)}}" alt="logo-{{ $brand->slug}}">

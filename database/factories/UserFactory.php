@@ -31,12 +31,7 @@ class UserFactory extends Factory
             'role' => 'user',
             'lastname' => $this->faker->lastName,
             'firstname' => $this->faker->firstName,
-            'birthdate' => $this->faker->date($format = 'd-m-Y', $max = '01-01-2006'),
-            'phone_number' => $this->faker->unique()->phoneNumber,
-            'gender' => $this->faker->randomElement($array = array ('Femme','Homme')),
             'rgpd' => true,
-            'newsletters' => $this->faker->boolean($chanceOfGettingTrue = 50),
-            'cookies' => $this->faker->boolean($chanceOfGettingTrue = 50),
             'remember_token' => Str::random(50)
         ];
     }

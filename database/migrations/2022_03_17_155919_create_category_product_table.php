@@ -17,9 +17,10 @@ return new class extends Migration
     {
         Schema::create('category_product', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Product::class);
-            $table->foreignIdFor(Category::class);
+            $table->foreignId('product_id')->onDelete('cascade');
+            $table->foreignId('category_id');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

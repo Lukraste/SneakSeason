@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\Size;
 use App\Models\User;
-use App\Models\Inventory;
+use App\Models\Product;
 use App\Enums\OrderStatus;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -15,26 +16,26 @@ class Order extends Model
 
     protected $fillable = [
         'user_id',
-        'inventory_id',
+        'product_id',
+        'size_id',
         'quantity',
         'status',
         'date',
         'total_price_vat',
         'reference_code'
     ];
-
-    protected $casts = [
-        'status' => OrderStatus::class
-    ];
-
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-
-    public function inventory(): BelongsTo
+    public function product(): BelongsTo
     {
-        return $this->belongsTo(Inventory::class);
+        return $this->belongsTo(Product::class);
+    }
+
+    public function size(): BelongsTo
+    {
+        return $this->belongsTo(Size::class);
     }
 }

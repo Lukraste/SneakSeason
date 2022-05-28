@@ -3,14 +3,18 @@
 namespace App\Models;
 
 use App\Models\Size;
+use App\Models\User;
 use App\Models\Brand;
 use App\Models\Color;
 use App\Models\Image;
-use App\Models\Modele;
 
+use App\Models\Order;
 use App\Models\Category;
-use App\Enums\ProductStock;
 
+use App\Models\Inventory;
+use App\Models\Collection;
+use App\Enums\ProductStock;
+use App\Models\UserProduct;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -31,7 +35,7 @@ class Product extends Model
         'description',
         'brand_id',
         'color_id',
-        'modele_id'
+        'collection_id'
     ];
     
     public function brand(): BelongsTo
@@ -39,9 +43,9 @@ class Product extends Model
         return $this->belongsTo(Brand::class);
     }
 
-    public function modele(): BelongsTo
+    public function collection(): BelongsTo
     {
-        return $this->belongsTo(Modele::class);
+        return $this->belongsTo(Collection::class);
     }
 
     public function images(): HasMany
@@ -63,5 +67,24 @@ class Product extends Model
     public function color(): BelongsTo
     {
         return $this->belongsTo(Color::class);
+    }
+
+    public function inventories(): HasMany
+    {
+        return $this->HasMany(Inventory::class);
+    }
+
+    public function orders(): HasMany
+    {
+        return $this->HasMany(Order::class);
+    }
+    
+    public function user_products() : HasMany
+    {
+        return $this->hasMany(UserProduct::class);
+    }
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'user_product');
     }
 }

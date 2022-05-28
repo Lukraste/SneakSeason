@@ -21,11 +21,7 @@ return new class extends Migration
             $table->integer('nbr_orders')->default(0);
             $table->string('lastname', 255)->nullable();
             $table->string('firstname', 255)->nullable();
-            $table->string('birthdate', 255)->nullable();
-            $table->enum('gender', ['Femme', 'Homme'])->nullable();
-            $table->string('phone_number')->unique()->nullable();
             $table->boolean('rgpd')->default(false);
-            $table->boolean('newsletters')->default(false);
             $table->boolean('cookies')->default(false);
             $table->rememberToken();
             $table->timestamps();

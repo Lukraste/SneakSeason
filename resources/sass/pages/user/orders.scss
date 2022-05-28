@@ -1,0 +1,25 @@
+.container {
+   h1 {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      margin-bottom: 40px;
+      font-size: 25pt;
+   }
+   a {
+      &:hover{
+         cursor: pointer;
+         text-decoration: underline;
+      }
+   }
+
+
+   form {
+      input {
+         &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+         }
+      }
+   }
+}

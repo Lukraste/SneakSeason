@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
-use App\Models\Order;
+use App\Models\Size;
 use App\Models\User;
+use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Inventory extends Model
 {
@@ -21,13 +22,13 @@ class Inventory extends Model
         'quantity',
     ];
     
-    public function orders(): HasMany
+    public function product(): BelongsTo
     {
-        return $this->hasMany(Order::class);
+        return $this->belongsTo(Product::class);
     }
-
-    public function users(): BelongsToMany
+    
+    public function size(): BelongsTo
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(Size::class);
     }
 }

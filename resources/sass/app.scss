@@ -5,10 +5,12 @@
         'pages/products/products-all',
         'pages/products/product-one',
         'pages/brands/brand-one',
-        'pages/brands/brands-homepage';
-
-
-
+        'pages/brands/brands-homepage',
+        'pages/products/collection',
+        'pages/user/register',
+        'pages/user/orders',
+        'admin/admin-navbar';
+        
 html {
     body {
         background-color: $secondaryColor;

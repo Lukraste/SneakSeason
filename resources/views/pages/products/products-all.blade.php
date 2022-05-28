@@ -9,10 +9,9 @@
            <div class="infos">
                <div>
                    <a href="{{ route('sneakers.show', ['slug' => $product->slug]) }}"><p id="name">{{ $product->name }}</p></a>
-                   <a href="{{ route('brands.show', ['slug' => $product->brand->slug]) }}"><p>{{ $product->brand->slug }}</p></a> 
+                   <a href="{{ route('brands.show', ['slug' => $product->brand->slug]) }}"><p>{{ $product->brand->name }}</p></a> 
                </div>
                <p id="price">{{ $product->price_vat}} €</p>
-               {{$product->id}}
            </div>
            <a href="{{ route('sneakers.show', ['slug' => $product->slug]) }}" class="call-to-action">Réserver</a>
        </div>

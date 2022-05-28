@@ -3,7 +3,7 @@ namespace App\Http\Controllers\Pages;
 use App\Models\Size;
 use App\Models\Brand;
 use App\Models\Color;
-use App\Models\Modele;
+use App\Models\Collection;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -115,17 +115,16 @@ class ProductController extends Controller
         return view('pages.brands.brand-one', ['brand' => $brand]);
     }
 
-    
     /**
      * Remove the specified resource from storage.
      *
      * @param  String  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show_modele($slug)
+    public function show_collection($slug)
     {
-        $brand = Modele::where('slug', $slug)->first();
-        return view('pages.modeles.model-one', ['modele' => $modele]);
+        $collection = Collection::where('slug', $slug)->first();
+        return view('pages.products.collection', ['collection' => $collection]);
     }
 
 }

@@ -17,8 +17,8 @@ return new class extends Migration
     {
         Schema::create('inventory', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Product::class);
-            $table->foreignIdFor(Size::class);
+            $table->foreignId('product_id')->onDelete('cascade');
+            $table->foreignId('size_id')->onDelete('cascade');
             $table->integer('quantity')->default(5);
             $table->timestamps();
         });

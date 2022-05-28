@@ -9,21 +9,20 @@
                     @include('components.socials')
 
                 </div>
-                <div class="sm:ml-0 flex flex-col">
-                    <h2 class="font-semibold leading-4">Contactez-nous !</h2>
-                    <p href="javascript:void(0)" class="focus:outline-none focus:underline  leading-4 mt-6 cursor-pointer">Tél : +32 xxx.xx.xx.xx</p>
-                    <p href="javascript:void(0)" class="focus:outline-none focus:underline  leading-4 mt-6 cursor-pointer">E-mail : contact@sneakeason.be</p>
-                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6 cursor-pointer">Formulaire de contact</a>
-                </div>
-                <div class="flex mt-4 flex-col">
-                    <h2 class="font-semibold leading-4 ">En savoir plus</h2>
+                <div class="flex mt-8 pt-6 flex-col">
+                    <h2 class="font-semibold leading-2 ">En savoir plus</h2>
                     <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6 cursor-pointer">Qui sommes-nous ?</a>
-                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6  cursor-pointer">Condition générales d'utilisation</a>
                     <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6  cursor-pointer">Politiques de confidentialité</a>
-                    <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6  cursor-pointer">Cookies</a>
                 </div>
+                
+            <div class="flex mt-8 pt-6 flex-col">
+                <h2 class="font-semibold leading-3 ">Contacts</h2>
+                <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6 cursor-pointer">Tél : +32 xxx.xx.xx.xx</a>
+                <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:underline  leading-4 mt-6  cursor-pointer">contact@sneakseason.be</a>
+            </div>
+
                 <div class="mt-10 lg:block hidden">
-                    <label class="text-lg font-medium leading-5 ">S'abonner à la newsletter</label>
+                    <label class="text-lg font-medium leading-4 ">S'abonner à la newsletter</label>
                     <div class="cursor-pointer flex items-center justify-between border border-gray-800 dark:border-white mt-4">
                         <input type="text" class=" leading-4 p-4 w-full focus:outline-none  dark:placeholder-white dark:bg-gray-900 dark:border-white placeholder-gray-800" placeholder="Votre adresse e-mail" />
                         <button aria-label="send" class="mr-4 fill-current text-gray-800 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
@@ -37,6 +36,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="mt-10 lg:hidden">
                 <label class="font-medium leading-5 ">S'abonner à la newsletter</label>
                 <div class="flex items-center justify-between border border-gray-800 dark:border-white mt-4">

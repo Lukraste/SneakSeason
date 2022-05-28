@@ -2,8 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Size;
 use App\Models\User;
 use App\Models\Order;
+use App\Models\Product;
 use App\Models\Inventory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -28,10 +30,13 @@ class OrderFactory extends Factory
     {
         $usersId = User::pluck('id');
         $inventoriesId = Inventory::pluck('id');
+        $productsId = Product::pluck('id');
+        $sizesId = Size::pluck('id');
 
         return [
             'user_id' => $this->faker->randomElement($usersId),
-            'inventory_id' => $this->faker->randomElement($inventoriesId),
+            'product_id' => $this->faker->randomElement($productsId),
+            'size_id' => $this->faker->randomElement($sizesId),
             'quantity' => rand(1, 5),
             'status' => $this->faker->randomElement($array = array ('Disponible','Indisponible')),
             'date' => $this->faker->date($format = 'd-m-Y', $max = '31-12-2022'),

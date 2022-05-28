@@ -2,7 +2,7 @@
 
 use App\Models\Brand;
 use App\Models\Color;
-use App\Models\Modele;
+use App\Models\Collection;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -27,10 +27,11 @@ return new class extends Migration
             $table->enum('stock', ['Disponible', 'Rupture' ]);
             $table->integer('discount')->nullable();
             $table->text('description')->nullable();
-            $table->foreignIdFor(Brand::class);
-            $table->foreignIdFor(Color::class);
-            $table->foreignIdFor(Modele::class);
+            $table->foreignId('brand_id')->onDelete('cascade');
+            $table->foreignId('color_id')->constrained();
+            $table->foreignId('collection_id')->onDelete('cascade');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

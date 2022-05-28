@@ -5,7 +5,10 @@
   @include('components.head')
 </head>
 
+
 <body>
+
+ 
   @include('components.header')
    
   @yield('content')
@@ -14,11 +17,13 @@
 
   <!-- Script pour le slider d'images d'un produit -->
 
+  <!-- Script pour les élements Tailwindcss -->
+
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   <script>
     const activeImage = document.querySelector(".product-image .active");
     const productImages = document.querySelectorAll(".image-list img");
-    const navItem = document.querySelector('a.toggle-nav');
-
+  
     function changeImage(e) {
       activeImage.src = e.target.src;
     }
@@ -26,11 +31,7 @@
     this.nextElementSibling.classList.toggle('active');
     } 
     productImages.forEach(image => image.addEventListener("click", changeImage));
-    navItem.addEventListener('click', toggleNavigation);
   </script>
-
-  <!-- Script pour les élements Tailwindcss -->
-
-  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

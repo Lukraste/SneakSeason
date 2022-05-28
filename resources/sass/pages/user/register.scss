@@ -1,0 +1,47 @@
+.call-to-action {
+   display: flex;
+   justify-content: center;
+   margin: auto;
+   width: 200px;
+   text-align: center;
+   border: 2px solid currentColor;
+   border-radius: 10px;
+   color: $secondaryColor;
+   font-size: 12pt;
+   font-weight: 100;
+   overflow: hidden;
+   padding: 10px 25px;
+   position: relative;
+   text-decoration: none;
+   transition: .2s transform ease-in-out;
+   will-change: transform;
+   z-index: 0;
+
+   &:after {
+       background-color: $secondaryColor;
+      
+       border-radius: 10px;
+       content: '';
+       display: block;
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       left: 0;
+       top: 0;
+       transform: translate(-100%, 0) rotate(10deg);
+       transform-origin: top left;
+       transition: .2s transform ease-out;
+       will-change: transform;
+       z-index: -1;
+   }
+
+   &:hover:after {
+       transform: translate(0, 0);
+   }
+
+   &:hover {
+       border: 2px solid transparent;
+       color: $primaryColor;
+       will-change: transform;
+   }
+}

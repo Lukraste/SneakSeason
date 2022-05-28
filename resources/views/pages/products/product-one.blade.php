@@ -29,9 +29,9 @@
       </div>
 
       <div class="form-product">
-      <form action="/order/create" method="post">
+      <form action="/orders" method="post">
         @csrf
-
+        <input name="id" value="{{ $product->id }}" hidden/>
             <div>
               <label for="size_id">Taille(s)</label>
               <select class="select" name="size_id" id="sizes">
@@ -44,24 +44,37 @@
 
             <div>
             <label for="quantity">Quantité</label>
-              <select class="select quantity" name="size_id" id="sizes">
-                @for ($i=0 ; $i<=10 ; $i++)
+              <select class="select quantity" name="quantity" id="quantity">
+                @for ($i=1 ; $i<=10 ; $i++)
                   <option value="{{$i}}">{{ $i }}</option>
                 @endfor
             </select>
             </div>
             <br>
             <p>{{$product->price_vat}}€ <span>({{ $product->be_vat }}% Tva comprise)</span></p>
+
             <div class="buttons">
-              <button class="call-to-action">
-                <input type="submit" value="Réserver">
+              <div class="call-to-action">   
+                <button>
+                  <input type="submit" value="Réserver">
+                </button>
+              </div>
+              </form>
+
+            <form action="/user_products" method="post">
+              @csrf
+            <input name="product_id" value="{{ $product->id }}" hidden/>
+            
+              <button type="submit">
+
+              <section class="ac-footer">
+                <input type="submit" value="">
+                <div class="ac-footer-container ac-footer-brand">
+                  <span class="ac-icon ac-icon-love-dark"></span>
+                </div> 
+              </section> 
               </button>
-            </input>
-            <section class="ac-footer">
-              <div class="ac-footer-container ac-footer-brand">
-                <span class="ac-icon ac-icon-love-dark"></span> 
-              </div> 
-            </section>  
+            </form>
             </div>
         </form>
       </div>
@@ -79,21 +92,21 @@
     <h2>Produits similaires</h2>
     <div class="products">
       <div class="products-list">
-        @foreach($product->modele->products->take(5) as $product)
-          <div class="product-one">
-            @foreach ($product->images->take(1) as $image)
-              <a class="relative overflow-hidden bg-no-repeat bg-cover" id="image" href="{{ route('sneakers.show', ['slug' => $product->slug, 'id']) }}">
-                <img class="max-w-xs hover:scale-125 transition duration-500 ease-in-out" src="{{asset('storage/images/products/'.$image->path) }}" alt="{{ $product->slug }}">
+        @foreach($product->collection->products->take(5) as $similarProduct)
+          <div class="product-one" @if($similarProduct->name == $product->name) hidden @endif>
+            @foreach ($similarProduct->images->take(1) as $image)
+              <a class="relative overflow-hidden bg-no-repeat bg-cover" id="image" href="{{ route('sneakers.show', ['slug' => $similarProduct->slug, 'id']) }}">
+                <img class="max-w-xs hover:scale-125 transition duration-500 ease-in-out" src="{{asset('storage/images/products/'.$image->path) }}" alt="{{ $similarProduct->slug }}">
               </a>
             @endforeach
             <div class="infos">
               <div>
-                <a href="{{ route('sneakers.show', ['slug' => $product->slug]) }}"><p id="name">{{ $product->name }}</p></a>
-                <a href="{{ route('brands.show', ['slug' => $product->brand->slug]) }}"><p id="brand">{{ $product->brand->name }}</p></a> 
+                <a href="{{ route('sneakers.show', ['slug' => $similarProduct->slug]) }}"><p id="name">{{ $similarProduct->name }}</p></a>
+                <a href="{{ route('brands.show', ['slug' => $similarProduct->brand->slug]) }}"><p id="brand">{{ $similarProduct->brand->name }}</p></a> 
               </div>
-                <p id="price">{{ $product->price_vat}} €</p>
+                <p id="price">{{ $similarProduct->price_vat}} €</p>
             </div>
-              <a href="{{ route('sneakers.show', ['slug' => $product->slug]) }}" class="call-to-action">Réserver</a>
+              <a href="{{ route('sneakers.show', ['slug' => $similarProduct->slug]) }}" class="call-to-action">Réserver</a>
           </div>
       @endforeach
    </div>
